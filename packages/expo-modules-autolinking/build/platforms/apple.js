@@ -98,11 +98,11 @@ ${generateCommonImportList(swiftModules)}
 ${generateDebugOnlyImportList(debugOnlySwiftModules)}
 @objc(${className})
 public class ${className}: ModulesProvider {
-  public override func getModuleClasses() -> [AnyModule.Type] {
+  public override func getModuleClasses() -> [any AnyModule.Type] {
 ${generateModuleClasses(modulesClassNames, debugOnlyModulesClassNames)}
   }
 
-  public override func getAppDelegateSubscribers() -> [ExpoAppDelegateSubscriber.Type] {
+  public override func getAppDelegateSubscribers() -> [any ExpoAppDelegateSubscriber.Type] {
 ${generateModuleClasses(appDelegateSubscribers, debugOnlyAppDelegateSubscribers)}
   }
 
